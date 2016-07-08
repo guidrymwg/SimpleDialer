@@ -2,7 +2,6 @@ package com.lightcone.simpledialer;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.View;
@@ -28,42 +27,44 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         // Set up buttons and attach click listeners
 
-        Button button1 = (Button)findViewById(R.id.button1);
+        Button button1 = (Button) findViewById(R.id.button1);
         button1.setText(buttonLabels[0]);
         button1.setOnClickListener(this);
 
-        Button button2 = (Button)findViewById(R.id.button2);
+        Button button2 = (Button) findViewById(R.id.button2);
         button2.setText(buttonLabels[1]);
         button2.setOnClickListener(this);
 
-        Button button3 = (Button)findViewById(R.id.button3);
+        Button button3 = (Button) findViewById(R.id.button3);
         button3.setText(buttonLabels[2]);
         button3.setOnClickListener(this);
 
-        Button button4 = (Button)findViewById(R.id.button4);
+        Button button4 = (Button) findViewById(R.id.button4);
         button4.setText(buttonLabels[3]);
         button4.setOnClickListener(this);
 
-        Button button5 = (Button)findViewById(R.id.button5);
+        Button button5 = (Button) findViewById(R.id.button5);
         button5.setText(buttonLabels[4]);
         button5.setOnClickListener(this);
 
-        Button button6 = (Button)findViewById(R.id.button6);
+        Button button6 = (Button) findViewById(R.id.button6);
         button6.setText(buttonLabels[5]);
         button6.setOnClickListener(this);
     }
 
     // Launch the phone dialer
 
-    public void launchDialer(String number){
-        String numberToDial = "tel:"+number;
+    public void launchDialer(String number) {
+        String numberToDial = "tel:" + number;
         startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(numberToDial)));
     }
 
 
-    /** Method to populate the data arrays */
+    /**
+     * Method to populate the data arrays
+     */
 
-    public void populateArrays(){
+    public void populateArrays() {
 
         /** In a practical application the arrays phoneNum and buttonLabels could be
          * updated dynamically from the Web in this method.  For this project we just
@@ -85,7 +86,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         buttonLabels[5] = "Issac Nuton";
     }
 
-    /** Process button events */
+    /**
+     * Process button events
+     */
 
     @Override
     public void onClick(View v) {
