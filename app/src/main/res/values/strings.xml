@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">SimpleDialer</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">SimpleDialer</string>
+    <string name="main_label">My Friends</string>
+
+</resources>
